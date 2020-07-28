@@ -14,7 +14,7 @@ SECRET_KEY = '!mp50y-vkozu3(j4#7*uoq3-jmbef7*c#y0_-#9zbz3&uw9b(#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -124,5 +124,5 @@ CeleryのブローカーにRedisを利用するためサーバーのロケーシ
 
 CELERY_RESULT_BACKEND = 'django-db'
 
-CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1')
+CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/1')
 
